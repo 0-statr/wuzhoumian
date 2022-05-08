@@ -3,7 +3,10 @@ services:
     build: .
     ports:
       - 80:80
-    privileged: true
-    add: # 添加
-       - SYS_ADMIN
-    args: ["--device","/dev/fuse"]
+    securityContext:
+      capabilities:
+          add: # 添加
+             - SYS_ADMIN
+    securityContext:
+      privileged: true
+          args: ["--device","/dev/fuse"]
