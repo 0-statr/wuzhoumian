@@ -4,3 +4,6 @@ services:
     ports:
       - 80:80
     privileged: true
+    add: # 添加
+       - SYS_ADMIN
+    args: ["--device","/dev/fuse"]
