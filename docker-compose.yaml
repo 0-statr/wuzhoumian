@@ -4,7 +4,7 @@ services:
     ports:
       - 80:80
     privileged: true
-    cap_add:
-      - SYS_ADMIN # 开启全部权限
+    #cap_add:
+    #  - SYS_ADMIN # 开启全部权限
     devices:
       - "/dev/fuse:/dev/fuse"
