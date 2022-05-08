@@ -7,6 +7,5 @@ services:
       capabilities:
           add: # 添加
              - SYS_ADMIN
-    securityContext:
       privileged: true
           args: ["--device","/dev/fuse"]
